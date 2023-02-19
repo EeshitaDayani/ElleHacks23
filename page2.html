@@ -1,40 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
 
+
+  <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-
   <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+  text-align: center;
+  font-size: 50px;
+  color:#45a049;
+  margin-top: 50px;
+}
+
+h1::before {
+  content: "Ceres";
+  color:darkgreen;
+  font-size: 72px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 20px;
+}
+
     label {
       display: inline-block;
-      width: 120px
+      width: 120px;
+      margin-bottom: 10px;
+      
     }
 
-    input,
-    select {
+    input, select {
       width: 150px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    #div {
+        text-align: center;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+      text-align: center;
+    }
+
+    hr {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border: 0;
+      border-top: 1px solid #ccc;
+      text-align: center;
     }
   </style>
-
 </head>
 
 <body>
-  <label>Item Code</label> <input id="ItemNumberBox" type="text"><br><br>
-  <label>Name</label> <input id="NameBox" type="text"><br><br>
-  <label>Description</label> <input id="DescriptionBox" type="text"><br><br>
-  <label>Grams</label> <input id="GramsBox" type="number"><br><br>
-  <label>Original Price</label> <input id="OriginalPriceBox" type="number"><br><br>
-  <label>Subsidized Price</label> <input id="SubsidizedPriceBox" type="number"><br><br>
+    <div class="inputs">
+        <center>
+    <h1> Mario </h1>
+  <label for="ItemNumberBox">Item Code</label>
+  <input id="ItemNumberBox" type="text"><br>
 
+  <label for="NameBox">Name</label>
+  <input id="NameBox" type="text"><br>
+
+  <label for="DescriptionBox">Description</label>
+  <input id="DescriptionBox" type="text"><br>
+
+  <label for="GramsBox">Grams</label>
+  <input id="GramsBox" type="number"><br>
+
+  <label for="OriginalPriceBox">Original Price</label>
+  <input id="OriginalPriceBox" type="number"><br>
+
+  <label for="SubsidizedPriceBox">Subsidized Price</label>
+  <input id="SubsidizedPriceBox" type="number"><br>
 
   <hr>
+
   <button id="Insbtn">INSERT</button>
   <button id="Selbtn">SELECT</button>
   <button id="Updbtn">UPDATE</button>
   <button id="Delbtn">DELETE</button>
+  </center>
+</div>
 
 
   <script type="module">
@@ -178,16 +248,44 @@
 
     
   </script>
-
+<style>
+.Table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+  
+  .Table th,
+  .Table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .Table th {
+    font-weight: bold;
+    background-color: #f2f2f2;
+  }
+  
+  .Table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .Table tr:hover {
+    background-color: #ddd;
+  }
+  </style>
 
 <div class="container mt-3">
+    <center>
     <table class="Table">
         <thead>
           <th>Item Code</th>
           <th>Name</th>
-          <th>Description</th>
-          <th>Grams</th>
-          <th>Original Price</th>
+          <th>Description   </th>
+          <th>Grams     </th>
+          <th>Original Price     </th>
           <th>Subsidized Price</th>
         </thead>
         
@@ -195,9 +293,11 @@
           
         </tbody>
       </table>
+      </center>
 </div>
     
 <script type="module">
+    
 
     var tbody = document.getElementById('tbody1');
     function AddItemsToTable(Description, Grams, ItemBox, Name, 
