@@ -9,8 +9,59 @@
     <title>Document</title>
 </head>
 
+<style>
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color:#45a049;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  h1::before {
+    content: "Ceres";
+    color:darkgreen;
+    font-size: 72px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+  }
+  </style>
+
 <body>
+
+<style>
+    .Table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+  
+  .Table th,
+  .Table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .Table th {
+    font-weight: bold;
+    background-color: #f2f2f2;
+  }
+  
+  .Table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .Table tr:hover {
+    background-color: #ddd;
+  }
+  </style>
+
+<h1> Mario </h1>
 <div class="container mt-3">
+    <center>
     <table class="Table">
         <thead>
           <th>Item Code</th>
@@ -25,6 +76,7 @@
           
         </tbody>
       </table>
+      </center>
 </div>
     
 <script type="module">
