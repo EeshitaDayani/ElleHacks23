@@ -4,5 +4,5 @@ const lib = require('lib')({token: "tok_dev_PgAKpZ1he4MvMpnL6d7w71zXRByCX1eps7BK
 
 // make API request
 let result =  lib.edayani.ellehacks['@0.0.2']({
-  number: `+14168482770`
+  number: `+1..........`
 });
